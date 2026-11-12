@@ -1,0 +1,249 @@
+[gd_scene format=3 uid="uid://d2j4tb01k1mf4"]
+
+[ext_resource type="PackedScene" uid="uid://0fyml7yqhlp3" path="res://models/1/kiri_86_-_low_poly_model.glb" id="1_5xqdw"]
+
+[node name="Wheel" unique_id=1061272143 instance=ExtResource("1_5xqdw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="kiri86_Body" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="0" unique_id=1589588812]
+visible = false
+
+[node name="Object_4" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body" index="0" unique_id=1974541463]
+visible = false
+
+[node name="kiri86_Body_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body/Object_4" index="0" unique_id=677470641]
+visible = false
+
+[node name="kiri86_Bottom" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="1" unique_id=498628078]
+visible = false
+
+[node name="Object_7" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bottom" index="0" unique_id=1417861763]
+visible = false
+
+[node name="kiri86_Bottom_UCB_BOTTOM_GT_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bottom/Object_7" index="0" unique_id=1314486145]
+visible = false
+
+[node name="kiri86_Headlights_Glass" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="2" unique_id=91122945]
+visible = false
+
+[node name="Object_10" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Headlights_Glass" index="0" unique_id=714091063]
+visible = false
+
+[node name="kiri86_Headlights_Glass_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Headlights_Glass/Object_10" index="0" unique_id=297239153]
+visible = false
+
+[node name="kiri86_Windshield" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="3" unique_id=429405049]
+visible = false
+
+[node name="Object_13" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Windshield" index="0" unique_id=1478690595]
+visible = false
+
+[node name="kiri86_Windshield_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Windshield/Object_13" index="0" unique_id=1979110890]
+visible = false
+
+[node name="kiri86_Rear_window" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="4" unique_id=1303424257]
+visible = false
+
+[node name="Object_16" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Rear_window" index="0" unique_id=1509174492]
+visible = false
+
+[node name="kiri86_Rear_window_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Rear_window/Object_16" index="0" unique_id=655649029]
+visible = false
+
+[node name="kiri86_Body_Glass" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="5" unique_id=2000289171]
+visible = false
+
+[node name="Object_19" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body_Glass" index="0" unique_id=1089656665]
+visible = false
+
+[node name="kiri86_Body_Glass_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body_Glass/Object_19" index="0" unique_id=2017140765]
+visible = false
+
+[node name="kiri86_Hood" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="6" unique_id=2127817671]
+visible = false
+
+[node name="Object_22" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Hood" index="0" unique_id=106546374]
+visible = false
+
+[node name="kiri86_Hood_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Hood/Object_22" index="0" unique_id=983063120]
+visible = false
+
+[node name="kiri86_Interior" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="7" unique_id=873530196]
+visible = false
+
+[node name="Object_25" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Interior" index="0" unique_id=157364537]
+visible = false
+
+[node name="kiri86_Interior_UCB_Interior_Trim_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Interior/Object_25" index="0" unique_id=1878163358]
+visible = false
+
+[node name="kiri86_Suspension_front" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="8" unique_id=1181903717]
+visible = false
+
+[node name="Object_28" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Suspension_front" index="0" unique_id=744427652]
+visible = false
+
+[node name="kiri86_Suspension_front_UCB_BOTTOM_GT_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Suspension_front/Object_28" index="0" unique_id=1080171246]
+visible = false
+
+[node name="kiri86_Glass_Driver" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="9" unique_id=1353154449]
+visible = false
+
+[node name="Object_31" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Glass_Driver" index="0" unique_id=1716488712]
+visible = false
+
+[node name="kiri86_Glass_Driver_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Glass_Driver/Object_31" index="0" unique_id=1137682725]
+visible = false
+
+[node name="kiri86_Glass_Passenger" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="10" unique_id=1310675893]
+visible = false
+
+[node name="Object_34" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Glass_Passenger" index="0" unique_id=136932637]
+visible = false
+
+[node name="kiri86_Glass_Passenger_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Glass_Passenger/Object_34" index="0" unique_id=1670787189]
+visible = false
+
+[node name="kiri86_Steering" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="11" unique_id=2111582800]
+visible = false
+
+[node name="Object_37" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Steering" index="0" unique_id=1121658049]
+visible = false
+
+[node name="kiri86_Steering_Wheel_UCB_Interior_Trim_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Steering/Object_37" index="0" unique_id=1236232708]
+visible = false
+
+[node name="kiri86_Steering" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Steering" index="1" unique_id=1670461003]
+visible = false
+
+[node name="kiri86_Taillights_Glass" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="12" unique_id=2097372305]
+visible = false
+
+[node name="Object_40" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Taillights_Glass" index="0" unique_id=692891290]
+visible = false
+
+[node name="kiri86_Taillights_Glass_UCB_Lights_and_Glass_Transperent_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Taillights_Glass/Object_40" index="0" unique_id=1731824066]
+visible = false
+
+[node name="kiri86_Headlights" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="13" unique_id=1790184908]
+visible = false
+
+[node name="Object_43" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Headlights" index="0" unique_id=412105957]
+visible = false
+
+[node name="kiri86_Headlights_UCB_Lights_and_Glass_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Headlights/Object_43" index="0" unique_id=774503134]
+visible = false
+
+[node name="kiri86_Blinkers" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="14" unique_id=635286066]
+visible = false
+
+[node name="Object_46" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Blinkers" index="0" unique_id=553666994]
+visible = false
+
+[node name="kiri86_Blinkers_UCB_Lights_and_Glass_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Blinkers/Object_46" index="0" unique_id=345216620]
+visible = false
+
+[node name="kiri86_Reverse" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="15" unique_id=2061080591]
+visible = false
+
+[node name="Object_49" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Reverse" index="0" unique_id=577331178]
+visible = false
+
+[node name="kiri86_Reverse_UCB_Lights_and_Glass_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Reverse/Object_49" index="0" unique_id=855620088]
+visible = false
+
+[node name="kiri86_Brakelights001" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="16" unique_id=2021439200]
+visible = false
+
+[node name="Object_52" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Brakelights001" index="0" unique_id=859093957]
+visible = false
+
+[node name="kiri86_Brakelights001_UCB_Lights_and_Glass_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Brakelights001/Object_52" index="0" unique_id=673555266]
+visible = false
+
+[node name="kiri86_Numberplates_Rear" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="17" unique_id=422472763]
+visible = false
+
+[node name="Object_55" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Numberplates_Rear" index="0" unique_id=2006395111]
+visible = false
+
+[node name="kiri86_Numberplates_Rear_Numberplates_Misk_U_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Numberplates_Rear/Object_55" index="0" unique_id=1501375195]
+visible = false
+
+[node name="kiri86_Body_Badges" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="18" unique_id=1265047225]
+visible = false
+
+[node name="Object_58" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body_Badges" index="0" unique_id=1698636866]
+visible = false
+
+[node name="kiri86_Body_Badges_Carbadges_misc_U_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body_Badges/Object_58" index="0" unique_id=109474673]
+visible = false
+
+[node name="kiri86_Bumper_front" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="19" unique_id=1467070326]
+visible = false
+
+[node name="Object_61" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_front" index="0" unique_id=1023260164]
+visible = false
+
+[node name="kiri86_Bumper_front_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_front/Object_61" index="0" unique_id=1884897220]
+visible = false
+
+[node name="kiri86_Bumper_Front_Inner" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="20" unique_id=1554514740]
+visible = false
+
+[node name="Object_64" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_Front_Inner" index="0" unique_id=1754936074]
+visible = false
+
+[node name="kiri86_Bumper_Front_Inner_UCB_BOTTOM_GT_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_Front_Inner/Object_64" index="0" unique_id=1374832603]
+visible = false
+
+[node name="kiri86_Numberplates_Front" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="21" unique_id=191156459]
+visible = false
+
+[node name="Object_67" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Numberplates_Front" index="0" unique_id=1825510354]
+visible = false
+
+[node name="kiri86_Numberplates_Front_Numberplates_Misk_U_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Numberplates_Front/Object_67" index="0" unique_id=711464787]
+visible = false
+
+[node name="kiri86_Trunk_door" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="22" unique_id=1275266664]
+visible = false
+
+[node name="Object_70" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Trunk_door" index="0" unique_id=808041987]
+visible = false
+
+[node name="kiri86_Trunk_door_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Trunk_door/Object_70" index="0" unique_id=1396416639]
+visible = false
+
+[node name="kiri86_Trunk_door_inner" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="23" unique_id=2048006023]
+visible = false
+
+[node name="Object_73" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Trunk_door_inner" index="0" unique_id=117396212]
+visible = false
+
+[node name="kiri86_Trunk_door_inner_UCB_BOTTOM_GT_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Trunk_door_inner/Object_73" index="0" unique_id=1553702004]
+visible = false
+
+[node name="kiri86_Bumper_rear" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="24" unique_id=38089548]
+visible = false
+
+[node name="Object_76" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_rear" index="0" unique_id=2122026901]
+visible = false
+
+[node name="kiri86_Bumper_rear_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_rear/Object_76" index="0" unique_id=1212747782]
+visible = false
+
+[node name="kiri86_bumper_rear_inner" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="25" unique_id=1459922993]
+visible = false
+
+[node name="kiri86_Wheel_FL" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="26" unique_id=1611243024]
+transform = Transform3D(-0.741042, 2.9802326e-08, -4.7222056e-08, 2.9802337e-08, 0.741042, -7.625755e-08, 6.95944e-08, -1.1238601e-07, -0.502821, 0, 0, 0)
+
+[node name="kiri86_Wheel_RL" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="27" unique_id=2174512]
+visible = false
+
+[node name="kiri86_Wheel_RR" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="28" unique_id=1978725004]
+visible = false
+
+[node name="kiri86_Wheel_FR" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(327703833) index="29" unique_id=396793384]
+visible = false

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b1gui7im16x3n"]
+
+[ext_resource type="PackedScene" uid="uid://bygv0vcyhi3iq" path="res://models/2/lct_3000_07-_low_poly_model.glb" id="1_lsqa2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mglw7"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_lsqa2"]
+
+[node name="Body" unique_id=719980108 instance=ExtResource("1_lsqa2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="LCT300007_Body_LCT13_07_Bodymat_0" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode/LCT300007_Body/Object_16" parent_id_path=PackedInt32Array(832028169) index="0" unique_id=449079089]
+surface_material_override/0 = SubResource("StandardMaterial3D_mglw7")
+
+[node name="LCT300007_Reardoor_Left_LCT13_07_Bodymat_0" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode/LCT300007_Reardoor_Left/Object_40" parent_id_path=PackedInt32Array(1280579251) index="0" unique_id=1790226444]
+surface_material_override/0 = SubResource("StandardMaterial3D_mglw7")
+
+[node name="LCT300007_Reardoor_Right_LCT13_07_Bodymat_0" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode/LCT300007_Reardoor_Right/Object_43" parent_id_path=PackedInt32Array(1545844626) index="0" unique_id=391005853]
+surface_material_override/0 = SubResource("StandardMaterial3D_mglw7")
+
+[node name="LCT300007_WheelStock_FR" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(1150927002) index="21" unique_id=1633140819]
+visible = false
+
+[node name="LCT300007_WheelStock_RL" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(1150927002) index="22" unique_id=2009099147]
+visible = false
+
+[node name="LCT300007_WheelStock_RR" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(1150927002) index="23" unique_id=1882486199]
+visible = false
+
+[node name="LCT300007_WheelStock_FR2" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(1150927002) index="24" unique_id=1388320824]
+visible = false
+
+[node name="Body" type="MultiMeshInstance3D" parent="." index="1" unique_id=502038829]
+material_override = SubResource("StandardMaterial3D_mglw7")
+multimesh = SubResource("MultiMesh_lsqa2")

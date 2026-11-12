@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bgi2tbd1dd2jc"]
+
+[ext_resource type="PackedScene" uid="uid://bygv0vcyhi3iq" path="res://models/2/lct_3000_07-_low_poly_model.glb" id="1_abt87"]
+
+[node name="Wheel" unique_id=719980108 instance=ExtResource("1_abt87")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="LCT300007_BUMPER_FRONT" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="0" unique_id=1853469146]
+visible = false
+
+[node name="LCT300007_BUMPER_FRONT_INNER" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="1" unique_id=1603236991]
+visible = false
+
+[node name="LCT300007_Glass_Driver" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="2" unique_id=1433791239]
+visible = false
+
+[node name="LCT300007_interior" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="3" unique_id=282256073]
+visible = false
+
+[node name="LCT300007_Body" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="4" unique_id=266232845]
+visible = false
+
+[node name="LCT300007_Bottom" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="5" unique_id=1306652853]
+visible = false
+
+[node name="LCT300007_Suspension" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="6" unique_id=1295502077]
+visible = false
+
+[node name="LCT300007_Bumper_rear" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="7" unique_id=122346881]
+visible = false
+
+[node name="LCT300007_Steering" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="8" unique_id=1045153474]
+visible = false
+
+[node name="LCT300007_Headlight_Glass" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="9" unique_id=646321677]
+visible = false
+
+[node name="LCT300007_Taillights_Glass" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="10" unique_id=908644739]
+visible = false
+
+[node name="LCT300007_Windshield" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="11" unique_id=1987326338]
+visible = false
+
+[node name="LCT300007_Reardoor_Left" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="12" unique_id=169655557]
+visible = false
+
+[node name="LCT300007_Reardoor_Right" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="13" unique_id=1450754840]
+visible = false
+
+[node name="LCT300007_Reardoor_Left_Inner" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="14" unique_id=408669305]
+visible = false
+
+[node name="LCT300007_Reardoor_Right_Inner" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="15" unique_id=148913824]
+visible = false
+
+[node name="LCT300007_Blinkers" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="16" unique_id=1444052173]
+visible = false
+
+[node name="LCT300007_Reverse" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="17" unique_id=1952284496]
+visible = false
+
+[node name="LCT300007_Brakelights" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="18" unique_id=1140382776]
+visible = false
+
+[node name="LCT300007_Glass_Driver2" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="19" unique_id=953466147]
+visible = false
+
+[node name="LCT300007_Headlights" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="20" unique_id=1664436087]
+visible = false
+
+[node name="LCT300007_WheelStock_FR" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="21" unique_id=278623511]
+transform = Transform3D(-1.058553, 7.825869e-07, -1.5497201e-06, -1.5497201e-06, 3.7326725e-08, 1.058553, 7.938549e-07, 1.043528, -3.7863003e-08, 0, 0, 0)
+
+[node name="LCT300007_WheelStock_RL" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="22" unique_id=2016977670]
+visible = false
+
+[node name="LCT300007_WheelStock_RR" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="23" unique_id=1205910930]
+visible = false
+
+[node name="LCT300007_WheelStock_FR2" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="24" unique_id=418046683]
+visible = false
+
+[node name="LCT300007_Numberplate_front" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="25" unique_id=1824957914]
+visible = false
+
+[node name="LCT300007_Body_Badges" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="26" unique_id=2008191604]
+visible = false
+
+[node name="LCT300007_Numberplate_rear" parent="Sketchfab_model/b446160d39a344f981cea1bac42db8af_fbx/RootNode" parent_id_path=PackedInt32Array(306943799) index="27" unique_id=932195503]
+visible = false
