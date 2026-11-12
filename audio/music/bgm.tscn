@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bebbjkb4fyq8b"]
+
+[ext_resource type="AudioStream" uid="uid://dynecpkt872bn" path="res://audio/music/bransboynd-retro-lounge-389644.mp3" id="4_s3jaw"]
+
+[node name="Bgm" type="AudioStreamPlayer" unique_id=525803180]
+process_mode = 3
+stream = ExtResource("4_s3jaw")
+autoplay = true
+bus = &"Music"

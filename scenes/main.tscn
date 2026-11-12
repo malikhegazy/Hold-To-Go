@@ -1,0 +1,705 @@
+[gd_scene format=3 uid="uid://b24pojuh12mat"]
+
+[ext_resource type="PackedScene" uid="uid://tt2b1l0lod50" path="res://nodes/player.tscn" id="1_o6xl0"]
+[ext_resource type="Script" uid="uid://dgdx83q462x1s" path="res://scripts/ui.gd" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://c2r7rimxcv37g" path="res://icons/pause.png" id="3_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://b6qpeuvyxmxwm" path="res://icons/pointing.png" id="4_gqmmt"]
+[ext_resource type="Shader" uid="uid://bqo3v7rfvwayp" path="res://shaders/blur.gdshader" id="4_tefeu"]
+[ext_resource type="Texture2D" uid="uid://bvm1km63438li" path="res://icons/play.png" id="6_a8y0u"]
+[ext_resource type="Script" uid="uid://dgy4pg7b78dkm" path="res://scripts/endless_node.gd" id="6_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://c66fiytomuw7m" path="res://icons/refresh.png" id="7_jkv2x"]
+[ext_resource type="AudioStream" uid="uid://ds2or0oy5a1jb" path="res://audio/environment/city_ambient.wav" id="8_85g3d"]
+[ext_resource type="Texture2D" uid="uid://bff7bya4c05uy" path="res://icons/exit.png" id="8_jbj1t"]
+[ext_resource type="Material" uid="uid://b5ji24h1pxflq" path="res://textures/tarred_gravel.material" id="8_tipki"]
+[ext_resource type="Texture2D" uid="uid://dvq0r4jhnwdyb" path="res://icons/wave_sound.png" id="9_muem4"]
+[ext_resource type="Texture2D" uid="uid://b207qomk7acdo" path="res://icons/music_player.png" id="10_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://4itbmk4mu1tt" path="res://icons/computer.png" id="11_0ld40"]
+[ext_resource type="Texture2D" uid="uid://cynar4q5shr7i" path="res://icons/options.png" id="11_jscy8"]
+[ext_resource type="Texture2D" uid="uid://b4np5vvsc44qm" path="res://icons/man.png" id="12_0ld40"]
+[ext_resource type="Texture2D" uid="uid://ci7nunnuku0gm" path="res://icons/bluesky.png" id="12_yc10j"]
+[ext_resource type="Texture2D" uid="uid://dtl7gaq8d0rtg" path="res://icons/github_invertocat_white.png" id="13_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://hvr2bg6m5njx" path="res://icons/yt_icon_white_digital.png" id="14_yc10j"]
+[ext_resource type="Texture2D" uid="uid://e73uvs6h3sla" path="res://icons/fps.png" id="17_jscy8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i7eh4"]
+shader = ExtResource("4_tefeu")
+shader_parameter/blur_amount = 4.00000019
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_gqmmt"]
+points = PackedVector2Array(0, 0, 160, 0, 160, 160, 0, 160)
+
+[sub_resource type="GDScript" id="GDScript_o6xl0"]
+script/source = "extends DirectionalLight3D
+
+func _process(delta: float) -> void:
+	shadow_enabled = Global.shadow
+"
+
+[node name="Main" type="Node3D" unique_id=737743138]
+
+[node name="Player" parent="." unique_id=1917129173 instance=ExtResource("1_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1161694982]
+process_mode = 3
+script = ExtResource("2_tbgi4")
+
+[node name="Blur" type="ColorRect" parent="UI" unique_id=1880708382]
+visible = false
+material = SubResource("ShaderMaterial_i7eh4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Menu" type="Control" parent="UI" unique_id=497225100]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="TapToGo" type="Label" parent="UI/Menu" unique_id=797319804]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -544.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 90
+text = "Hold To GO!"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Pointing" type="TextureRect" parent="UI/Menu" unique_id=889712401]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -256.0
+offset_right = 264.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+offset_transform_enabled = true
+texture = ExtResource("4_gqmmt")
+
+[node name="Settings" type="Button" parent="UI/Menu" unique_id=424009323]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 128.0
+offset_transform_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/Settings" unique_id=1571444553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_jscy8")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Game" type="Control" parent="UI" unique_id=2041313479]
+process_mode = 1
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ScoreLabel" type="Label" parent="UI/Game" unique_id=764912043]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -608.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 256.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Score: 0
+High Score: Loading"
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="Pause" type="TextureButton" parent="UI/Game" unique_id=1259434693]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("3_dp3eg")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+flip_v = true
+
+[node name="FpsLabel" type="Label" parent="UI/Game" unique_id=1878883742]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -48.0
+offset_right = 64.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "FPS"
+vertical_alignment = 2
+
+[node name="PauseMenu" type="Control" parent="UI" unique_id=219417791]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MenuCont" type="Control" parent="UI/PauseMenu" unique_id=849873828]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Continue" type="TouchScreenButton" parent="UI/PauseMenu/MenuCont" unique_id=1759648747]
+position = Vector2(-256, -80)
+shape = SubResource("ConvexPolygonShape2D_gqmmt")
+
+[node name="Button" type="Panel" parent="UI/PauseMenu/MenuCont/Continue" unique_id=1199887475]
+offset_right = 160.0
+offset_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/PauseMenu/MenuCont/Continue/Button" unique_id=1588173703]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -56.0
+offset_right = 52.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_a8y0u")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Restart" type="TouchScreenButton" parent="UI/PauseMenu/MenuCont" unique_id=169681013]
+position = Vector2(-80, -80)
+shape = SubResource("ConvexPolygonShape2D_gqmmt")
+action = "pause_menu_restart_pressed"
+
+[node name="Button" type="Panel" parent="UI/PauseMenu/MenuCont/Restart" unique_id=1551392675]
+offset_right = 160.0
+offset_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/PauseMenu/MenuCont/Restart/Button" unique_id=1500983057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -56.0
+offset_right = 52.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("7_jkv2x")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Exit" type="TouchScreenButton" parent="UI/PauseMenu/MenuCont" unique_id=1550967657]
+position = Vector2(96, -80)
+shape = SubResource("ConvexPolygonShape2D_gqmmt")
+action = "pause_menu_exit_pressed"
+
+[node name="Button" type="Panel" parent="UI/PauseMenu/MenuCont/Exit" unique_id=188903418]
+offset_right = 160.0
+offset_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/PauseMenu/MenuCont/Exit/Button" unique_id=618708767]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -56.0
+offset_right = 52.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("8_jbj1t")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Socials" type="Panel" parent="UI/PauseMenu" unique_id=559108677]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = -96.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PauseMenu/Socials" unique_id=1429097929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="GH" type="TextureRect" parent="UI/PauseMenu/Socials/HBoxContainer" unique_id=390419164]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("13_gqmmt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LinkButton" type="LinkButton" parent="UI/PauseMenu/Socials/HBoxContainer/GH" unique_id=1851980508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+uri = "https://github.com/malikhegazy"
+metadata/_edit_lock_ = true
+
+[node name="YT" type="TextureRect" parent="UI/PauseMenu/Socials/HBoxContainer" unique_id=35333737]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = ExtResource("14_yc10j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LinkButton" type="LinkButton" parent="UI/PauseMenu/Socials/HBoxContainer/YT" unique_id=1357998809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+uri = "https://youtube.com/@malikhegazydev"
+metadata/_edit_lock_ = true
+
+[node name="BSKY" type="TextureRect" parent="UI/PauseMenu/Socials/HBoxContainer" unique_id=839986571]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+texture = ExtResource("12_yc10j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LinkButton" type="LinkButton" parent="UI/PauseMenu/Socials/HBoxContainer/BSKY" unique_id=1321914921]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+uri = "https://bsky.app/profile/malikhegazy.bsky.social"
+metadata/_edit_lock_ = true
+
+[node name="Settings" type="Button" parent="UI/PauseMenu" unique_id=195695367]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = -16.0
+grow_vertical = 0
+offset_transform_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/PauseMenu/Settings" unique_id=1267011114]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_jscy8")
+expand_mode = 1
+
+[node name="GameOver" type="Control" parent="UI" unique_id=1754084031]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="UI/GameOver" unique_id=1088644685]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -160.0
+offset_right = 240.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Score" type="Label" parent="UI/GameOver/Panel" unique_id=724539225]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -128.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 53
+text = "Score: 000"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="HiScore" type="Label" parent="UI/GameOver/Panel" unique_id=365389284]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -48.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "High Score: 000"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Restart" type="Button" parent="UI/GameOver/Panel" unique_id=340700825]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 32.0
+offset_right = 48.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/GameOver/Panel/Restart" unique_id=696108250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_jkv2x")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="SettingsMenu" type="Control" parent="UI" unique_id=1956291177]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="SfxVolume" type="HSlider" parent="UI/SettingsMenu" unique_id=855385596]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 144.0
+offset_right = -32.0
+offset_bottom = 176.0
+grow_horizontal = 2
+max_value = 1.0
+step = 0.1
+
+[node name="TextureRect" type="TextureRect" parent="UI/SettingsMenu/SfxVolume" unique_id=1606130411]
+layout_mode = 0
+offset_left = -48.0
+offset_right = -16.0
+offset_bottom = 32.0
+texture = ExtResource("9_muem4")
+expand_mode = 1
+
+[node name="BgmVolume" type="HSlider" parent="UI/SettingsMenu" unique_id=2087800642]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = -32.0
+offset_bottom = 112.0
+grow_horizontal = 2
+max_value = 1.0
+step = 0.1
+
+[node name="TextureRect" type="TextureRect" parent="UI/SettingsMenu/BgmVolume" unique_id=1350498329]
+layout_mode = 0
+offset_left = -48.0
+offset_right = -16.0
+offset_bottom = 32.0
+texture = ExtResource("10_dp3eg")
+expand_mode = 1
+
+[node name="ResVolume" type="HSlider" parent="UI/SettingsMenu" unique_id=240227622]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 208.0
+offset_right = -208.0
+offset_bottom = 240.0
+grow_horizontal = 2
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="TextureRect" type="TextureRect" parent="UI/SettingsMenu/ResVolume" unique_id=66064646]
+layout_mode = 0
+offset_left = -48.0
+offset_right = -16.0
+offset_bottom = 32.0
+texture = ExtResource("11_0ld40")
+expand_mode = 1
+
+[node name="ShadowCheckBox" type="CheckBox" parent="UI/SettingsMenu" unique_id=1336528489]
+layout_mode = 1
+offset_left = 112.0
+offset_top = 272.0
+offset_right = 184.0
+offset_bottom = 304.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 10
+text = "Shadow"
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/SettingsMenu/ShadowCheckBox" unique_id=769999582]
+layout_mode = 0
+offset_left = -40.0
+offset_right = -8.0
+offset_bottom = 32.0
+texture = ExtResource("12_0ld40")
+expand_mode = 1
+
+[node name="ShowFpsCheckBox" type="CheckBox" parent="UI/SettingsMenu" unique_id=1034715091]
+layout_mode = 1
+offset_left = 400.0
+offset_top = 272.0
+offset_right = 480.0
+offset_bottom = 304.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 10
+text = "Show FPS"
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/SettingsMenu/ShowFpsCheckBox" unique_id=1398720722]
+layout_mode = 0
+offset_left = -40.0
+offset_right = -8.0
+offset_bottom = 32.0
+texture = ExtResource("17_jscy8")
+expand_mode = 1
+
+[node name="ResMode" type="OptionButton" parent="UI/SettingsMenu" unique_id=2102076553]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -176.0
+offset_top = 192.0
+offset_right = -31.0
+offset_bottom = 256.0
+grow_horizontal = 0
+alignment = 1
+selected = 1
+item_count = 2
+popup/item_0/text = "Pixel"
+popup/item_0/id = 0
+popup/item_1/text = "Normal"
+popup/item_1/id = 1
+
+[node name="Close" type="Button" parent="UI/SettingsMenu" unique_id=650803124]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -112.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+theme_override_font_sizes/font_size = 24
+text = "Close"
+
+[node name="Specs" type="Label" parent="UI/SettingsMenu" unique_id=53634657]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "More Specs soon"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[node name="Loading" type="ColorRect" parent="UI" unique_id=1520609360]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="UI/Loading" unique_id=1175290417]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "LOADING…"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1330799293]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shadow_enabled = true
+script = SubResource("GDScript_o6xl0")
+
+[node name="Envi" type="Node3D" parent="." unique_id=2075102635]
+script = ExtResource("6_ya4ey")
+
+[node name="SpawnTimer" type="Timer" parent="Envi" unique_id=1062493661]
+wait_time = 2.0
+autostart = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1492446581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+use_collision = true
+size = Vector3(100, 0.001, 4)
+material = ExtResource("8_tipki")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=806513877]
+process_mode = 3
+stream = ExtResource("8_85g3d")
+volume_db = -15.06
+autoplay = true
+
+[connection signal="ui_signal" from="Player" to="UI" method="player_ui_signal"]
+[connection signal="pressed" from="UI/Menu/Settings" to="UI" method="pause_menu_settings_pressed"]
+[connection signal="pressed" from="UI/Game/Pause" to="UI" method="pause_button_pressed"]
+[connection signal="released" from="UI/PauseMenu/MenuCont/Continue" to="UI" method="pause_menu_continue_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/MenuCont/Restart" to="UI" method="pause_menu_restart_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/MenuCont/Exit" to="UI" method="pause_menu_exit_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/Settings" to="UI" method="pause_menu_settings_pressed"]
+[connection signal="pressed" from="UI/GameOver/Panel/Restart" to="UI" method="restart_scene"]
+[connection signal="value_changed" from="UI/SettingsMenu/SfxVolume" to="UI" method="sfx_volume_value_changed"]
+[connection signal="value_changed" from="UI/SettingsMenu/BgmVolume" to="UI" method="bgm_volume_value_changed"]
+[connection signal="value_changed" from="UI/SettingsMenu/ResVolume" to="UI" method="resolution_volume_value_changed"]
+[connection signal="toggled" from="UI/SettingsMenu/ShadowCheckBox" to="UI" method="shadow_check_box_toggled"]
+[connection signal="toggled" from="UI/SettingsMenu/ShowFpsCheckBox" to="UI" method="show_fps_check_box_toggled"]
+[connection signal="item_selected" from="UI/SettingsMenu/ResMode" to="UI" method="resolution_mode_item_selected"]
+[connection signal="pressed" from="UI/SettingsMenu/Close" to="UI" method="settings_menu_close_pressed"]
+[connection signal="timeout" from="Envi/SpawnTimer" to="Envi" method="_on_spawn_timer_timeout"]

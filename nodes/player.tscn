@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://tt2b1l0lod50"]
+
+[ext_resource type="Script" uid="uid://d0wqmqhpbsbqr" path="res://scripts/player.gd" id="1_ejohg"]
+[ext_resource type="PackedScene" uid="uid://cbe6rnxvoaj5m" path="res://characters/1/remy.tscn" id="2_qbdof"]
+[ext_resource type="AudioStream" uid="uid://d1rlo542623p8" path="res://audio/foley/footsteps/1.wav" id="3_7lbay"]
+[ext_resource type="AudioStream" uid="uid://1bs5hftd106g" path="res://audio/foley/footsteps/2.wav" id="4_2wrp4"]
+[ext_resource type="AudioStream" uid="uid://cl7w67uj26l17" path="res://audio/foley/footsteps/3.wav" id="5_46y3y"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hg0js"]
+radius = 0.3
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g7b7a"]
+random_pitch = 1.122462
+streams_count = 3
+stream_0/stream = ExtResource("3_7lbay")
+stream_1/stream = ExtResource("4_2wrp4")
+stream_2/stream = ExtResource("5_46y3y")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_o5qli"]
+sky_material = SubResource("ProceduralSkyMaterial_sgp6g")
+
+[sub_resource type="Environment" id="Environment_7lbay"]
+background_mode = 2
+sky = SubResource("Sky_o5qli")
+
+[node name="Player" type="CharacterBody3D" unique_id=1917129173]
+script = ExtResource("1_ejohg")
+
+[node name="Remy" parent="." unique_id=1811628470 instance=ExtResource("2_qbdof")]
+transform = Transform3D(-0.54, 0, -4.72083e-08, 0, 0.54, 0, 4.72083e-08, 0, -0.54, 0, -1, 0)
+
+[node name="Coll" type="CollisionShape3D" parent="." unique_id=750259907]
+shape = SubResource("CapsuleShape3D_hg0js")
+
+[node name="Footstep" type="AudioStreamPlayer3D" parent="." unique_id=2056353318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+stream = SubResource("AudioStreamRandomizer_g7b7a")
+max_polyphony = 4
+
+[node name="FootstepTimer" type="Timer" parent="." unique_id=451041606]
+wait_time = 0.542
+
+[node name="PlayerCam" type="Node3D" parent="." unique_id=1801022795]
+
+[node name="Camera3D" type="Camera3D" parent="PlayerCam" unique_id=743971499]
+transform = Transform3D(1, 0, 0, 0, 0.66262007, 0.7489557, 0, -0.7489557, 0.66262007, 0, 4.273, 1.726)
+keep_aspect = 0
+environment = SubResource("Environment_7lbay")
+doppler_tracking = 2
+fov = 40.0
+
+[connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]

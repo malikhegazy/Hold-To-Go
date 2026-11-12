@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://cbc6h2mplle5u"]
+
+[ext_resource type="Script" uid="uid://433v1y57fqkc" path="res://scripts/traffic_car.gd" id="1_fe3nq"]
+[ext_resource type="AudioStream" uid="uid://dq0gxde54p706" path="res://audio/vehicles/engines/2.wav" id="2_agnkn"]
+[ext_resource type="PackedScene" uid="uid://24bb2t4xhgbn" path="res://models/1/body.tscn" id="2_roqc7"]
+[ext_resource type="PackedScene" uid="uid://d2j4tb01k1mf4" path="res://models/1/wheel.tscn" id="3_agnkn"]
+[ext_resource type="PackedScene" uid="uid://dt13denywmxbl" path="res://models/0/body.tscn" id="5_agnkn"]
+[ext_resource type="PackedScene" uid="uid://i0ntvv3fiw7t" path="res://models/0/wheel.tscn" id="6_qyv7q"]
+[ext_resource type="PackedScene" uid="uid://b1gui7im16x3n" path="res://models/2/body.tscn" id="7_470tu"]
+[ext_resource type="AudioStream" uid="uid://11jkwih5pjbr" path="res://audio/vehicles/honks/1.wav" id="7_dvcky"]
+[ext_resource type="AudioStream" uid="uid://b6sc8l7n61oho" path="res://audio/vehicles/honks/2.wav" id="8_hvpcx"]
+[ext_resource type="PackedScene" uid="uid://bgi2tbd1dd2jc" path="res://models/2/wheel.tscn" id="8_rje5v"]
+[ext_resource type="AudioStream" uid="uid://cxl03tn1pxjss" path="res://audio/vehicles/honks/3.wav" id="9_1a5u4"]
+[ext_resource type="AudioStream" uid="uid://tf3ntnxu8gnp" path="res://audio/vehicles/collisions/1.wav" id="10_hvpcx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7b7a"]
+size = Vector3(1.75, 1.125, 4.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyc6d"]
+size = Vector3(1.75, 1.375, 4.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2710c"]
+size = Vector3(2.11, 2.3710938, 5.6873045)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g7b7a"]
+streams_count = 3
+stream_0/stream = ExtResource("7_dvcky")
+stream_1/stream = ExtResource("8_hvpcx")
+stream_2/stream = ExtResource("9_1a5u4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qx4q"]
+size = Vector3(2, 1, 6)
+
+[node name="VehicleAI" type="Node3D" unique_id=2116078003]
+script = ExtResource("1_fe3nq")
+
+[node name="Car" type="Node3D" parent="." unique_id=1009341552]
+
+[node name="Engine" type="AudioStreamPlayer3D" parent="Car" unique_id=187531783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0.625, 1.0500002)
+stream = ExtResource("2_agnkn")
+volume_db = -10.0
+max_distance = 30.0
+panning_strength = 2.0
+attenuation_filter_db = 0.0
+doppler_tracking = 2
+
+[node name="DummyCar" type="Area3D" parent="Car" unique_id=202165371]
+visible = false
+
+[node name="Body" parent="Car/DummyCar" unique_id=1061272143 instance=ExtResource("2_roqc7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.024999999, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car/DummyCar" unique_id=2138939053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8125, 0)
+shape = SubResource("BoxShape3D_g7b7a")
+
+[node name="Wheel" parent="Car/DummyCar" unique_id=1963126291 instance=ExtResource("3_agnkn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7533155, 0.2824628, -1.3260803)
+
+[node name="Wheel2" parent="Car/DummyCar" unique_id=2118476480 instance=ExtResource("3_agnkn")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.753, 0.2825, -1.326)
+
+[node name="Wheel3" parent="Car/DummyCar" unique_id=83470633 instance=ExtResource("3_agnkn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7533155, 0.2824628, 1.133923)
+
+[node name="Wheel4" parent="Car/DummyCar" unique_id=2127733904 instance=ExtResource("3_agnkn")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.753, 0.2825, 1.1340032)
+
+[node name="DummyCar2" type="Area3D" parent="Car" unique_id=1804976595]
+visible = false
+
+[node name="Body" parent="Car/DummyCar2" unique_id=823071180 instance=ExtResource("5_agnkn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.075, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car/DummyCar2" unique_id=1048119574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9375, 0)
+shape = SubResource("BoxShape3D_gyc6d")
+
+[node name="Wheel" parent="Car/DummyCar2" unique_id=1720321544 instance=ExtResource("6_qyv7q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7533155, 0.33246282, -1.5510803)
+
+[node name="Wheel2" parent="Car/DummyCar2" unique_id=561149416 instance=ExtResource("6_qyv7q")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.753, 0.3325, -1.551)
+
+[node name="Wheel3" parent="Car/DummyCar2" unique_id=2098662173 instance=ExtResource("6_qyv7q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7533155, 0.33246282, 1.3339231)
+
+[node name="Wheel4" parent="Car/DummyCar2" unique_id=1817555210 instance=ExtResource("6_qyv7q")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.753, 0.3325, 1.3340032)
+
+[node name="DummyCar3" type="Area3D" parent="Car" unique_id=1935254989]
+
+[node name="Body" parent="Car/DummyCar3" unique_id=719980108 instance=ExtResource("7_470tu")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car/DummyCar3" unique_id=1980157618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6604493, 0.00029277802)
+shape = SubResource("BoxShape3D_2710c")
+
+[node name="Wheel" parent="Car/DummyCar3" unique_id=1576272409 instance=ExtResource("8_rje5v")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.955, 0.355, -1.885)
+
+[node name="Wheel2" parent="Car/DummyCar3" unique_id=439295791 instance=ExtResource("8_rje5v")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.955, 0.355, -1.885)
+
+[node name="Wheel3" parent="Car/DummyCar3" unique_id=1317519736 instance=ExtResource("8_rje5v")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.955, 0.355, 1.449)
+
+[node name="Wheel4" parent="Car/DummyCar3" unique_id=1029458514 instance=ExtResource("8_rje5v")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.955, 0.355, 1.449)
+
+[node name="Honk" type="AudioStreamPlayer3D" parent="Car" unique_id=911771585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -1)
+stream = SubResource("AudioStreamRandomizer_g7b7a")
+max_distance = 100.0
+attenuation_filter_db = 0.0
+doppler_tracking = 2
+
+[node name="HonkArea" type="Area3D" parent="Car" unique_id=1879476956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -5.6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car/HonkArea" unique_id=1911379529]
+shape = SubResource("BoxShape3D_6qx4q")
+
+[node name="CollisionSound" type="AudioStreamPlayer" parent="Car" unique_id=322323172]
+stream = ExtResource("10_hvpcx")
+
+[connection signal="body_entered" from="Car/DummyCar" to="." method="hit_player"]
+[connection signal="body_entered" from="Car/DummyCar2" to="." method="hit_player"]
+[connection signal="body_entered" from="Car/DummyCar3" to="." method="hit_player"]
+[connection signal="body_entered" from="Car/HonkArea" to="." method="_on_honk_area_body_entered"]

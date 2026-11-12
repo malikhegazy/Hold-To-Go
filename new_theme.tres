@@ -1,0 +1,97 @@
+[gd_resource type="Theme" format=3 uid="uid://bc01h8wgfe84q"]
+
+[ext_resource type="AudioStream" uid="uid://5bf2nmmpblag" path="res://audio/ui/hint.wav" id="2_78ylj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i66g5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7607843, 0.58431375, 0.101960786, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+corner_detail = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b1l4f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amlv4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7607843, 0.58431375, 0.101960786, 0.8666667)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+corner_detail = 20
+
+[sub_resource type="ImageTexture" id="ImageTexture_i7eh4"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_78ylj"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_aggjg"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_i66g5"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_37gq2"]
+color = Color(0.7607843, 0.58431375, 0.101960786, 1)
+thickness = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nft0o"]
+thickness = 20
+
+[sub_resource type="ImageTexture" id="ImageTexture_ya4ey"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_eb6dy"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 0.5)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = null
+Button/sounds/pressed_sound = ExtResource("2_78ylj")
+Button/styles/disabled = SubResource("StyleBoxFlat_i66g5")
+Button/styles/focus = SubResource("StyleBoxEmpty_b1l4f")
+Button/styles/hover = SubResource("StyleBoxFlat_i66g5")
+Button/styles/normal = SubResource("StyleBoxFlat_i66g5")
+Button/styles/pressed = SubResource("StyleBoxFlat_amlv4")
+CheckBox/colors/checkbox_checked_color = Color(0.7607843, 0.58431375, 0.101960786, 1)
+CheckBox/colors/checkbox_unchecked_color = Color(0, 0, 0, 1)
+HSlider/icons/grabber = SubResource("ImageTexture_i7eh4")
+HSlider/icons/grabber_disabled = SubResource("ImageTexture_78ylj")
+HSlider/icons/grabber_highlight = SubResource("ImageTexture_aggjg")
+HSlider/icons/tick = SubResource("ImageTexture_i66g5")
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_37gq2")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_37gq2")
+HSlider/styles/slider = SubResource("StyleBoxLine_nft0o")
+OptionButton/icons/arrow = SubResource("ImageTexture_ya4ey")
+OptionButton/icons/icon = SubResource("ImageTexture_eb6dy")
+Panel/styles/panel = SubResource("StyleBoxFlat_i66g5")

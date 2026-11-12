@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bt26sxlpxb4gg"]
+
+[ext_resource type="Material" uid="uid://b5ji24h1pxflq" path="res://textures/tarred_gravel.material" id="1_gxsu0"]
+[ext_resource type="Material" uid="uid://bu03owntjtf08" path="res://textures/walnut_veneer_02.material" id="2_d5xg1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5xg1"]
+diffuse_mode = 3
+albedo_color = Color(0, 1, 1, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g7b7a"]
+material = SubResource("StandardMaterial3D_d5xg1")
+size = Vector2(100, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7b7a"]
+size = Vector3(1.5, 0, 1.82)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sgt36"]
+material = ExtResource("2_d5xg1")
+size = Vector2(1.5, 1.82)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d5xg1"]
+size = Vector3(1.5, 0, 0.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j6er4"]
+material = ExtResource("2_d5xg1")
+size = Vector2(1.5, 0.5)
+
+[sub_resource type="GDScript" id="GDScript_d5xg1"]
+script/source = "extends Area3D
+
+func _on_body_entered(body: Node3D) -> void: if body.name == \"Player\": $\"..\".queue_free()
+"
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_3nfop"]
+plane = Plane(0, 0, 1, 0)
+
+[node name="Track3" type="CSGCombiner3D" unique_id=1663336249]
+use_collision = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=584556118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=236100683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+size = Vector3(100, 0.001, 2)
+material = ExtResource("1_gxsu0")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1587335668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.999999, 0.1925, -1.4375)
+size = Vector3(24, 0.375, 0.125)
+material = ExtResource("2_d5xg1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1477547472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.1925, -1.4375)
+size = Vector3(24, 0.375, 0.125)
+material = ExtResource("2_d5xg1")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=765208195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.067, -1.437)
+size = Vector3(2, 0.125, 0.125)
+material = ExtResource("2_d5xg1")
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="." unique_id=1901243618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=578885001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+size = Vector3(100, 0.001, 2)
+material = ExtResource("1_gxsu0")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1821638188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.999999, 0.1925, 1.437)
+size = Vector3(24, 0.375, 0.125)
+material = ExtResource("2_d5xg1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=550521380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.1925, 1.437)
+size = Vector3(24, 0.375, 0.125)
+material = ExtResource("2_d5xg1")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=546441020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.067, 1.438)
+size = Vector3(2, 0.125, 0.125)
+material = ExtResource("2_d5xg1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=670138754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 2.75)
+mesh = SubResource("PlaneMesh_g7b7a")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1155442020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2860055, 2.75)
+mass = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=669662135]
+shape = SubResource("BoxShape3D_g7b7a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D" unique_id=1216187901]
+mesh = SubResource("PlaneMesh_sgt36")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D" unique_id=551681510]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -0.125, 1.125)
+shape = SubResource("BoxShape3D_d5xg1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D2" unique_id=575395437]
+mesh = SubResource("PlaneMesh_j6er4")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RigidBody3D" unique_id=156128870]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, -0.125, -1.125)
+shape = SubResource("BoxShape3D_d5xg1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D3" unique_id=243556230]
+mesh = SubResource("PlaneMesh_j6er4")
+
+[node name="dis" type="Area3D" parent="." unique_id=1449421089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+script = SubResource("GDScript_d5xg1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dis" unique_id=1104388343]
+shape = SubResource("WorldBoundaryShape3D_3nfop")
+
+[connection signal="body_entered" from="dis" to="dis" method="_on_body_entered"]
