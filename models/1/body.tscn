@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://24bb2t4xhgbn"]
+
+[ext_resource type="PackedScene" uid="uid://0fyml7yqhlp3" path="res://models/1/kiri_86_-_low_poly_model.glb" id="1_psslr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lsqa2"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_psslr"]
+
+[node name="Body" unique_id=1061272143 instance=ExtResource("1_psslr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="kiri86_Body_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Body/Object_4" parent_id_path=PackedInt32Array(1908893488) index="0" unique_id=743025966]
+surface_material_override/0 = SubResource("StandardMaterial3D_lsqa2")
+
+[node name="kiri86_Hood_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Hood/Object_22" parent_id_path=PackedInt32Array(1670273168) index="0" unique_id=1055869028]
+surface_material_override/0 = SubResource("StandardMaterial3D_lsqa2")
+
+[node name="kiri86_Bumper_front_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_front/Object_61" parent_id_path=PackedInt32Array(1495890554) index="0" unique_id=896605119]
+surface_material_override/0 = SubResource("StandardMaterial3D_lsqa2")
+
+[node name="kiri86_Trunk_door_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Trunk_door/Object_70" parent_id_path=PackedInt32Array(1878318413) index="0" unique_id=2096602391]
+surface_material_override/0 = SubResource("StandardMaterial3D_lsqa2")
+
+[node name="kiri86_Bumper_rear_kiri86_Bodymat_0" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode/kiri86_Bumper_rear/Object_76" parent_id_path=PackedInt32Array(2009086510) index="0" unique_id=880190937]
+surface_material_override/0 = SubResource("StandardMaterial3D_lsqa2")
+
+[node name="kiri86_Wheel_FL" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(777858629) index="26" unique_id=997992168]
+visible = false
+
+[node name="kiri86_Wheel_RL" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(777858629) index="27" unique_id=142047746]
+visible = false
+
+[node name="kiri86_Wheel_RR" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(777858629) index="28" unique_id=1829873367]
+visible = false
+
+[node name="kiri86_Wheel_FR" parent="Sketchfab_model/614578e57e7744a28780cb5123519bd6_fbx/RootNode" parent_id_path=PackedInt32Array(777858629) index="29" unique_id=430524066]
+visible = false
+
+[node name="Body" type="MultiMeshInstance3D" parent="." index="1" unique_id=413141053]
+material_override = SubResource("StandardMaterial3D_lsqa2")
+multimesh = SubResource("MultiMesh_psslr")

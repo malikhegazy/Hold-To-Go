@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dt13denywmxbl"]
+
+[ext_resource type="PackedScene" uid="uid://bokbv72bkklrb" path="res://models/0/lightbody_lifted_85_-_low_poly_model.glb" id="1_lrm6y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrm6y"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_lrm6y"]
+
+[node name="Body" unique_id=823071180 instance=ExtResource("1_lrm6y")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="krmlgtbdy85_Body_krmlgtbdy85_Bodymat_0" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode/krmlgtbdy85_Body/Object_10" parent_id_path=PackedInt32Array(1879566294) index="0" unique_id=1650149903]
+surface_material_override/0 = SubResource("StandardMaterial3D_lrm6y")
+
+[node name="krmlgtbdy85_Bumper_Front_krmlgtbdy85_Bodymat_0" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode/krmlgtbdy85_Bumper_Front/Object_13" parent_id_path=PackedInt32Array(1563490713) index="0" unique_id=2035127743]
+surface_material_override/0 = SubResource("StandardMaterial3D_lrm6y")
+
+[node name="krmlgtbdy85_Hood_krmlgtbdy85_Bodymat_0" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode/krmlgtbdy85_Hood/Object_16" parent_id_path=PackedInt32Array(61072333) index="0" unique_id=1758490667]
+surface_material_override/0 = SubResource("StandardMaterial3D_lrm6y")
+
+[node name="krmlgtbdy85_Trunkdoor_krmlgtbdy85_Bodymat_0" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode/krmlgtbdy85_Trunkdoor/Object_19" parent_id_path=PackedInt32Array(873228587) index="0" unique_id=960732364]
+surface_material_override/0 = SubResource("StandardMaterial3D_lrm6y")
+
+[node name="krmlgtbdy85_WheelStock_FL" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(1090945093) index="26" unique_id=1084768874]
+visible = false
+
+[node name="krmlgtbdy85_WheelStock_RL" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(1090945093) index="27" unique_id=1906857466]
+visible = false
+
+[node name="krmlgtbdy85_WheelStock_FR" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(1090945093) index="28" unique_id=572726678]
+visible = false
+
+[node name="krmlgtbdy85_WheelStock_RR" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(1090945093) index="29" unique_id=1749279933]
+visible = false
+
+[node name="Body" type="MultiMeshInstance3D" parent="." index="1" unique_id=671095055]
+material_override = SubResource("StandardMaterial3D_lrm6y")
+multimesh = SubResource("MultiMesh_lrm6y")

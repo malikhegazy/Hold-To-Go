@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://i0ntvv3fiw7t"]
+
+[ext_resource type="PackedScene" uid="uid://bokbv72bkklrb" path="res://models/0/lightbody_lifted_85_-_low_poly_model.glb" id="1_ocv2x"]
+
+[node name="Wheel" unique_id=823071180 instance=ExtResource("1_ocv2x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="krmlgtbdy85_Bumper_Rear" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="0" unique_id=758367526]
+visible = false
+
+[node name="krmlgtbdy85_Lifted_Suspension" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="1" unique_id=1516503394]
+visible = false
+
+[node name="krmlgtbdy85_Body" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="2" unique_id=1115258437]
+visible = false
+
+[node name="krmlgtbdy85_Bumper_Front" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="3" unique_id=808552448]
+visible = false
+
+[node name="krmlgtbdy85_Hood" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="4" unique_id=1764314711]
+visible = false
+
+[node name="krmlgtbdy85_Trunkdoor" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="5" unique_id=1013627908]
+visible = false
+
+[node name="krmlgtbdy85_Interior" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="6" unique_id=1754540045]
+visible = false
+
+[node name="krmlgtbdy85_Headlights_Glass" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="7" unique_id=1794919700]
+visible = false
+
+[node name="krmlgtbdy85_Taillights_Glass" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="8" unique_id=1118466953]
+visible = false
+
+[node name="krmlgtbdy85_Body_Glass" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="9" unique_id=1197867497]
+visible = false
+
+[node name="krmlgtbdy85_Trunk_door_inner" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="10" unique_id=2124657141]
+visible = false
+
+[node name="krmlgtbdy85_Hood_inner" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="11" unique_id=371613844]
+visible = false
+
+[node name="krmlgtbdy85_Bumper_front_inner" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="12" unique_id=823538498]
+visible = false
+
+[node name="krmlgtbdy85_Glass_Rear" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="13" unique_id=801403183]
+visible = false
+
+[node name="krmlgtbdy85_Windshield" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="14" unique_id=1985985052]
+visible = false
+
+[node name="krmlgtbdy85_Bottom" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="15" unique_id=44175242]
+visible = false
+
+[node name="krmlgtbdy85_Lifted_Trim" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="16" unique_id=1190648167]
+visible = false
+
+[node name="krmlgtbdy85_Glass_Driver" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="17" unique_id=819242796]
+visible = false
+
+[node name="krmlgtbdy85_Glass_Passanger" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="18" unique_id=1049515277]
+visible = false
+
+[node name="krmlgtbdy85_Headlights" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="19" unique_id=1323972247]
+visible = false
+
+[node name="krmlgtbdy85_Blinkers" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="20" unique_id=759683214]
+visible = false
+
+[node name="krmlgtbdy85_Brakelights" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="21" unique_id=1955231896]
+visible = false
+
+[node name="krmlgtbdy85_Reverse" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="22" unique_id=882145957]
+visible = false
+
+[node name="krmlgtbdy85_Extra_A" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="23" unique_id=1171604422]
+visible = false
+
+[node name="krmlgtbdy85_Steering" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="24" unique_id=228498428]
+visible = false
+
+[node name="krmlgtbdy85_Bullbar" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="25" unique_id=16211272]
+visible = false
+
+[node name="krmlgtbdy85_WheelStock_FL" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="26" unique_id=270319463]
+transform = Transform3D(-0.445661, 4.102402e-14, 2.010142e-07, 5.4577734e-17, 0.445661, -5.8039518e-08, -2.5146863e-07, -7.26074e-08, -0.356244, 0, 0, 0)
+
+[node name="krmlgtbdy85_WheelStock_RL" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="27" unique_id=1377328728]
+visible = false
+
+[node name="krmlgtbdy85_WheelStock_FR" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="28" unique_id=178471252]
+visible = false
+
+[node name="krmlgtbdy85_WheelStock_RR" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="29" unique_id=836288433]
+visible = false
+
+[node name="krmlgtbdy85_Numberplates_Rear" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="30" unique_id=1621697522]
+visible = false
+
+[node name="krmlgtbdy85_Trunk_door_Badges" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="31" unique_id=1753778096]
+visible = false
+
+[node name="krmlgtbdy85_Body_Badges" parent="Sketchfab_model/5d224779c4a946848ba117b60ea1f8b8_fbx/RootNode" parent_id_path=PackedInt32Array(428307262) index="32" unique_id=665607291]
+visible = false
